@@ -1,0 +1,29 @@
+<div class="container" style="margin-top: 40px;">
+
+  <h2>Auth Test Page</h2>
+
+  <button *ngIf="!isAuthenticated" class="btn btn-primary" (click)="login()">
+    Login
+  </button>
+
+  <button *ngIf="isAuthenticated" class="btn btn-danger" (click)="logout()">
+    Logout
+  </button>
+
+  <hr>
+
+  <div *ngIf="isAuthenticated; else notLoggedIn">
+
+    <h3>Access Token</h3>
+    <pre>{{ accessToken }}</pre>
+
+    <h3>ID Token</h3>
+    <pre>{{ idToken }}</pre>
+
+  </div>
+
+  <ng-template #notLoggedIn>
+    <p>You are not authenticated.</p>
+  </ng-template>
+
+</div>
