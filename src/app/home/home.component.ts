@@ -28,10 +28,6 @@ export class HomeComponent implements OnInit {
     this.oidcSecurityService.authorize();
   }
 
-  logout() {
-    this.oidcSecurityService.logoff();
-  }
-
   private loadTokens() {
     // Get Access Token
     this.oidcSecurityService.getAccessToken().subscribe(token => {

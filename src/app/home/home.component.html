@@ -5,11 +5,6 @@
   <button *ngIf="!isAuthenticated" class="btn btn-primary" (click)="login()">
     Login
   </button>
-
-  <button *ngIf="isAuthenticated" class="btn btn-danger" (click)="logout()">
-    Logout
-  </button>
-
   <hr>
 
   <div *ngIf="isAuthenticated; else notLoggedIn">
